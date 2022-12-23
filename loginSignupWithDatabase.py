@@ -34,19 +34,19 @@ def signUp(collection_names):
             return
     print("User Not Found")
 
-def chose():
+def choose():
     print("-------------Press 0 for Exit---------------------")
     print("-------------Press 1 for Registration-------------")
     print("-------------Press 2 for Login--------------------")
-    chose = int(input())
-    return chose
+    choose = int(input())
+    return choose
 
-cho = chose()
-while(cho!=0):
+ch = choose()
+while(ch!=0):
     colName = get_database()
-    if(cho == 1):
+    if(ch == 1):
         login(colName) 
-        cho = chose()   
-    if(cho == 2):
+        ch = choose()   
+    if(ch == 2):
         signUp(colName)
-        cho = chose()
+        ch = choose()
